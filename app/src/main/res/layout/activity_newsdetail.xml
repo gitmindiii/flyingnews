@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activity.Activity_NewsDetail">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:cardElevation="@dimen/_10sdp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_centerVertical="true"
+                android:backgroundTint="@color/colorBlack"
+                android:padding="@dimen/_5sdp"
+                app:srcCompat="@drawable/ic_back_black" />
+
+            <TextView
+                android:id="@+id/tv_heading"
+                style="@style/largePopinsMediumStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/details"
+                android:textColor="@color/colorDarkBlack" />
+
+            <ImageView
+                android:id="@+id/iv_bookmark"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="@dimen/_5sdp"
+                app:srcCompat="@drawable/ic_bookmark" />
+
+            <ImageView
+                android:id="@+id/iv_share"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/iv_bookmark"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="@dimen/_5sdp"
+                app:srcCompat="@drawable/ic_share" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_below="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/frag_back"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite">
+
+
+            <TextView
+                android:id="@+id/txt_source"
+                style="@style/mediumPopinsSemiboldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:text=" source."
+                android:textColor="@color/colorBlack"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:background="@drawable/shadow_rectangle_bg"
+                android:paddingLeft="@dimen/_8sdp"/>
+
+            <TextView
+                android:id="@+id/tv_news_heading"
+                style="@style/mediumPopinsRegularStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_source"
+                android:text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in."
+                android:textColor="@color/colorBlack"
+                android:layout_margin="@dimen/_8sdp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_writer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_news_heading"
+
+                >
+
+
+
+                <ImageView
+                    android:id="@+id/img_article"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_250sdp"
+                    android:src="@drawable/placeholder_img"
+                    android:scaleType="centerCrop" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lay_content"
+                android:layout_below="@+id/rl_writer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                >
+
+                <TextView
+                    android:id="@+id/txt_content"
+                    style="@style/largePopinsRegularStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#222020"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_below="@+id/lay_content"
+                android:id="@+id/rl_writer_descrip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp">
+
+
+                <TextView
+                    android:id="@+id/txt_author"
+                    style="@style/SmallPopinsRegularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eric Mark, Contributor"
+                    android:maxLength="50"
+                    android:ellipsize="end"/>
+
+                <TextView
+                    android:id="@+id/txt_date"
+                    style="@style/SmallPopinsRegularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5 December 2018"
+                    android:drawableLeft="@drawable/time_ic"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,133 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+
+    </style>
+
+
+
+    <style name="AppThemeSignup" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="SwitchBtnTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="CropperAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+
+
+    <style name="SmallPopinsLightStyle">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+    </style>
+    <style name="ExtraSmallPopinsLightStyle">
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+    </style>
+
+    <style name="mediumPopinsLightStyle">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+    </style>
+
+    <style name="largePopinsLightStyle">
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+    </style>
+
+    <style name="SmallPopinsMediumStyle">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="mediumPopinsMediumStyle">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="largePopinsMediumStyle">
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="smallPopinsRegularStyle">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+    <style name="ExtraSmallPopinsRegularStyle">
+        <item name="android:textSize">@dimen/_9sdp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="SmallPopinsRegularStyle">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="mediumPopinsRegularStyle">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="largePopinsRegularStyle">
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+    <style name="smallPopinsSemiboldStyle">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="mediumPopinsSemiboldStyle">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="largePopinsSemiboldStyle">
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">@dimen/_10sdp</item>
+
+
+    </style>
+
+    <style name="MyCustomTabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabIndicatorColor">#00000000</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:tabStripEnabled">false</item>
+        <item name="tabMode">scrollable</item>
+
+        <item name="tabIndicatorFullWidth">false</item>
+
+
+    </style>
+
+    <style name="Base.Widget.Design.TabLayout" parent="android:Widget">
+        <item name="tabBackground">@drawable/tab_background</item>
+        <item name="tabIndicatorColor">#00000000</item>
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabSelectedTextColor">@color/activetab_txt_color</item>
+        <item name="tabTextColor">@color/inactivetab_txt_color</item>
+    </style>
+</resources>

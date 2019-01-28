@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">Flying News</string>
+
+    <string name="welcome_n_to">Welcome \n  To</string>
+    <string name="flying_news">Flying News</string>
+
+    <!--login and sign  up ACtivity-->
+    <string name="full_name">Full Name</string>
+    <string name="email_id">Email Id</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_in">Sign in</string>
+
+    <string name="email_can_hold_space">Email can\'t hold space</string>
+    <string name="please_enter_password">Please enter password</string>
+    <string name="pass_can_hold_space">Password can\'t hold space</string>
+    <string name="pass_should_have_minimum_six_char">Password should have minimum 6 characters.</string>
+    <string name="please_enter_valid_email_id">Please enter valid Email Id</string>
+    <string name="please_enter_fullname">Please enter Full Name</string>
+    <string name="please_enter_your_location">Please enter your location</string>
+    <string name="full_name_should_not_less_than_characters">Full name should not less than 2 characters</string>
+    <string name="or">OR</string>
+    <string name="connect_with_facebook">Connect With Facebook</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+
+
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="remember_me">Remember Me</string>
+
+    <!--home fragment-->
+    <string name="configuration">Configuration</string>
+    <string name="search">Search</string>
+    <string name="topics">Topics</string>
+    <string name="home">Home</string>
+    <string name="log_out">Log out</string>
+    <string name="in_devlopment_mode">In devlopment mode</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menus">Menus</string>
+    <string name="the_home_side_gave_madrid_a_guard_of_honour_as_they">The home side gave Madrid a guard of honour as they ran out Benzema latched an inch perfect Lucas Vasquez cross to …</string>
+
+
+    <!--Picker text-->
+    <string name="crop_image_activity_title">Crop Image</string>
+    <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
+    <string name="crop_image_menu_rotate_right">Rotate</string>
+    <string name="crop_image_menu_crop">Crop</string>
+    <string name="pick_image_intent_chooser_title">Select source</string>
+    <string name="result_image_desc">crop result</string>
+    <string name="pick_image_intent_text">Choose an image</string>
+
+
+    <string name="details">Details</string>
+    <string name="the_confirm_pass_filed_does_not_match">The Confirm password field does not match the Password field</string>
+    <string name="no_record_found">No Record Found</string>
+    <string name="no_news_found">No News Found</string>
+
+    <!--Configuration Fragment-->
+    <string name="term_conditions"><![CDATA[Term & Conditions]]></string>
+    <string name="membership_options">Membership Options</string>
+    <string name="login">Login</string>
+    <string name="my_membership">My Membership</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="about_us">About Us</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="language">Language</string>
+    <string name="faqs">FAQs</string>
+
+
+    <!--Contact us-->
+    <string name="submit">Submit</string>
+    <string name="email_address">Email Address*</string>
+    <string name="subject">Subject*</string>
+    <string name="message">Message*</string>
+    <string name="my_profile">My Profile</string>
+
+
+
+
+</resources>
