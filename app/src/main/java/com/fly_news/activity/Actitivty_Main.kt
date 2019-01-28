@@ -114,5 +114,5 @@ class Actitivty_Main : AppCompatActivity() {
         }
     }
 
-    fun testRepo(){}
+
 }
