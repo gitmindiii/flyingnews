@@ -22,24 +22,24 @@ import com.fly_news.utilities.SharedPreferenceManager
 import com.google.gson.Gson
 import org.jetbrains.anko.toast
 
-@SuppressLint("ValidFragment")
-class LeadStories_Fragment(catName:String) : Fragment() {
+
+class LeadStories_Fragment() : Fragment() {
     lateinit var mProgressDialog: Dialog;
     lateinit var recycler_view:RecyclerView
     lateinit var news_adapter:NewsListAdapter
     lateinit var newslist:ArrayList<ArticlesData>
     lateinit var layoutManager:RecyclerView.LayoutManager
     var page_index="1"
-    var catName:String
-    init {
-         this.catName=catName
-    }
+    var catName:String=""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view: View = inflater.inflate(R.layout.fragment_leadstories, container, false);
+
+        catName= arguments!!.getString("categoryName")
         recycler_view=view.findViewById(R.id.recycler_view)
         mProgressDialog = ProgressDialog_Utils(this!!.context!!)
         newslist=ArrayList<ArticlesData>()
@@ -64,13 +64,11 @@ class LeadStories_Fragment(catName:String) : Fragment() {
                 "page" to page_index, "to" to "", "from" to "",
                 "filter" to "", "type" to "everything", "category" to catType,"is_filter" to "0")
 
-        Log.i("inputMap8789",""+inputMap.toProperties().toString())
         mProgressDialog.show()
         val authToken = SharedPreferenceManager(this!!.activity!!).getString(SharedPreferenceManager.AUTH_TKOEN)
         Server_Call.callPost(inputMap,object : Responce_Server {
             override fun fail(msg: String) {
                 activity!!.toast(msg)
-                Log.i("responce 1223"+catName,""+msg);
                 mProgressDialog.dismiss()
             }
 
@@ -78,7 +76,6 @@ class LeadStories_Fragment(catName:String) : Fragment() {
                 val responce: NewsArticlesModel = Gson().fromJson<NewsArticlesModel>(msg, NewsArticlesModel::class.java!!)
                 var listOfNews= responce.articles as ArrayList<ArticlesData>
                 newslist.addAll(listOfNews);
-                Log.i("responce 122389"+catName,""+newslist.size);
                 news_adapter.notifyDataSetChanged()
                 mProgressDialog.dismiss()
                 isLoading=false
@@ -87,7 +84,7 @@ class LeadStories_Fragment(catName:String) : Fragment() {
         }, Constants.NEWS_ARTICLES_API, authToken)
     }
 
-var isLoading =false;
+    var isLoading =false;
     inner class PaginationScrollListener : RecyclerView.OnScrollListener(){
 
         override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
@@ -112,10 +109,13 @@ var isLoading =false;
 
 
 
-        override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-            super.onScrollStateChanged(recyclerView, newState)
 
-        }
+
+
+
     }
+
+
+
 
 }

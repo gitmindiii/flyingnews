@@ -22,6 +22,7 @@ class Constants {
         val SIGNUP_API="userRegistration"
         val NEWS_CAT_API="news/getCategory"
         val NEWS_ARTICLES_API="news/getNews"
+        val SAVE_NEWS_API="news/addNewsViewed"
 
         val PAGE_SIZE="10";
 

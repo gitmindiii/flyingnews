@@ -78,6 +78,13 @@
     <string name="my_profile">My Profile</string>
 
 
+    // Title
+    <string name="home_frag">Home</string>
+    <string name="menus_frag">Menus</string>
+    <string name="topics_frag">Topics</string>
+    <string name="search_frag">Search</string>
+    <string name="conf_frag">Configuration</string>
+
 
 
 </resources>

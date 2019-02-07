@@ -18,6 +18,7 @@ import com.fly_news.R
 
 
 class Server_Call {
+
     companion object {
 
         fun callPost(bodyParams: Map<String,String>,responce_server:Responce_Server,api:String,token:String){
@@ -108,6 +109,24 @@ class Server_Call {
                     })
         }
 
+        fun callPostWithoutListen(bodyParams: Map<String,String>,api:String,token:String){
+            AndroidNetworking.post(Constants.BASE_URl + api)
+                    .addHeaders(Constants.AUTH_TOKEN,token)
+                    .addBodyParameter(bodyParams)
+                    .setPriority(Priority.MEDIUM)
+                    .build()
+                    .getAsJSONObject(object : JSONObjectRequestListener {
+                        override fun onResponse(response: JSONObject) {
+
+                            Log.e("response345091: ", response.toString())
+                        }
+
+                        override fun onError(anError: ANError) {
+                            Log.e("onError345091: ", anError.localizedMessage)
+                        }
+                    })
+        }
+
         fun callPostString(bodyParams: Map<String,String>,responce_server:Responce_Server,api:String,token:String){
             Log.i("inputServer8789",""+bodyParams.toProperties().toString())
             AndroidNetworking.post(Constants.BASE_URl + api)
@@ -130,7 +149,6 @@ class Server_Call {
                     })
         }
 
-
         fun callImageLoad(imageUrl:String,imageView:ImageView,context:Context){
             AndroidNetworking.get(imageUrl)
                     .setTag("imageRequestTag")
@@ -151,7 +169,6 @@ class Server_Call {
         }
 
     }
-
 
 
 

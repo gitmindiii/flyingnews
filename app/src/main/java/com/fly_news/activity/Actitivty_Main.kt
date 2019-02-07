@@ -23,18 +23,21 @@ class Actitivty_Main : AppCompatActivity() {
     val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.home_ll -> {
+                tv_heading.setText(resources.getString(R.string.home_frag))
                 val fragment = Home_Fragment()
                 addFragment(fragment)
                 setItemStyle(item)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.menus_ll -> {
+                tv_heading.setText(resources.getString(R.string.menus_frag))
                 val fragment = Menus_Frafment()
                 addFragment(fragment)
                 setItemStyle(item)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.topics_ll -> {
+                tv_heading.setText(resources.getString(R.string.topics_frag))
                 val fragment = Topics_Frafment()
                 addFragment(fragment)
                 setItemStyle(item)
@@ -42,6 +45,7 @@ class Actitivty_Main : AppCompatActivity() {
             }
 
             R.id.search_ll -> {
+                tv_heading.setText(resources.getString(R.string.search_frag))
                 val fragment = Search_Frafment()
                 addFragment(fragment)
                 setItemStyle(item)
@@ -49,6 +53,7 @@ class Actitivty_Main : AppCompatActivity() {
             }
 
             R.id.setting_ll -> {
+                tv_heading.setText(resources.getString(R.string.conf_frag))
                 val fragment = Configuration_Fragment()
                 addFragment(fragment)
                 setItemStyle(item)

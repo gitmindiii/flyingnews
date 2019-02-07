@@ -25,8 +25,6 @@ import org.jetbrains.anko.toast
 
 class Home_Fragment : Fragment() {
     lateinit var cat_list:List<CatData>
-
-
     lateinit var viewpager: ViewPager;
     lateinit var sliding_tabs: TabLayout;
     lateinit var mProgressDialog: Dialog;

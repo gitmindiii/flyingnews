@@ -1,25 +1,22 @@
 package com.fly_news.adapter
 
 import android.app.Activity
-import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
-import com.fly_news.fragments.LeadStories_Fragment
-import com.fly_news.models.CatData
+import androidx.fragment.app.FragmentStatePagerAdapter
+import com.fly_news.fragments.topics_fragment.Topic_List_Fragment
 
-class Home_Fragment_Adapter(fm: FragmentManager, activity: FragmentActivity, list: List<CatData>) : FragmentPagerAdapter(fm) {
+class Topic_Fragment_Adapter(fm: FragmentManager, activity: FragmentActivity,topicName:Array<String>) : FragmentStatePagerAdapter(fm) {
 
-
-     var tab_list: List<CatData>
+     var topicName: Array<String>
      var ref_activity: FragmentActivity
 
     // initializer block
     init {
-        tab_list =list
+        this.topicName =topicName
         ref_activity=activity
     }
 
@@ -33,27 +30,19 @@ class Home_Fragment_Adapter(fm: FragmentManager, activity: FragmentActivity, lis
                 view = View(ref_activity)
             }
             imm.hideSoftInputFromWindow(view!!.getWindowToken(), 0)
-            var leadStories_Fragment=LeadStories_Fragment()
-            var bundle=Bundle()
-            bundle.putString("categoryName",tab_list[position].categoryName)
-            leadStories_Fragment.arguments=bundle
+            var leadStories_Fragment= Topic_List_Fragment()
             return leadStories_Fragment
         } else {
-            var leadStories_Fragment = LeadStories_Fragment()
-            var bundle = Bundle()
-            bundle.putString("categoryName", tab_list[position].categoryName)
-            leadStories_Fragment.arguments = bundle
+            var leadStories_Fragment = Topic_List_Fragment()
             return leadStories_Fragment
         }
-
     }
 
     override fun getCount(): Int {
-       return tab_list.size;
+        return topicName.size
     }
 
     override fun getPageTitle(position: Int): CharSequence? {
-        return tab_list[position].categoryName
+        return topicName.get(position)
     }
-
 }

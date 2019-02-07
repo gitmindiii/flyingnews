@@ -1,14 +1,13 @@
 package com.fly_news.models
 
-import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import java.io.Serializable
 
-@Parcelize
+
 class NewsArticlesModel(val status: String = "",
                         val totalResults: String = "",
-                        val articles: List<ArticlesData>):Parcelable
+                        val articles: List<ArticlesData>):Serializable
 
-@Parcelize
+
 data class ArticlesData(val source: SourceData,
                         val author: String,
                         val title: String,
@@ -16,9 +15,9 @@ data class ArticlesData(val source: SourceData,
                         val url: String,
                         val urlToImage: String,
                         val publishedAt: String,
-                        val content: String):Parcelable
+                        val content: String):Serializable
 
 
-@Parcelize
+
 data class SourceData(val id: String,
-                        val name: String):Parcelable
+                        val name: String):Serializable
